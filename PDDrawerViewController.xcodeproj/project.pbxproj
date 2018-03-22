@@ -15,6 +15,8 @@
 		EC224067206382C900E80D7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC224066206382C900E80D7A /* main.m */; };
 		EC224071206382C900E80D7A /* PDDrawerViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC224070206382C900E80D7A /* PDDrawerViewControllerTests.m */; };
 		EC22407C206382C900E80D7A /* PDDrawerViewControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC22407B206382C900E80D7A /* PDDrawerViewControllerUITests.m */; };
+		EC22408C206382EA00E80D7A /* PDDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC22408A206382EA00E80D7A /* PDDrawerViewController.m */; };
+		EC22409220638DFC00E80D7A /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC22409120638DFC00E80D7A /* MenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		EC224077206382C900E80D7A /* PDDrawerViewControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PDDrawerViewControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC22407B206382C900E80D7A /* PDDrawerViewControllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDDrawerViewControllerUITests.m; sourceTree = "<group>"; };
 		EC22407D206382C900E80D7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC22408A206382EA00E80D7A /* PDDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDDrawerViewController.m; sourceTree = "<group>"; };
+		EC22408B206382EA00E80D7A /* PDDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDDrawerViewController.h; sourceTree = "<group>"; };
+		EC22409020638DFC00E80D7A /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		EC22409120638DFC00E80D7A /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +107,13 @@
 		EC224056206382C900E80D7A /* PDDrawerViewController */ = {
 			isa = PBXGroup;
 			children = (
+				EC224089206382CF00E80D7A /* Source */,
 				EC224057206382C900E80D7A /* AppDelegate.h */,
 				EC224058206382C900E80D7A /* AppDelegate.m */,
 				EC22405A206382C900E80D7A /* ViewController.h */,
 				EC22405B206382C900E80D7A /* ViewController.m */,
+				EC22409020638DFC00E80D7A /* MenuViewController.h */,
+				EC22409120638DFC00E80D7A /* MenuViewController.m */,
 				EC22405D206382C900E80D7A /* Main.storyboard */,
 				EC224060206382C900E80D7A /* Assets.xcassets */,
 				EC224062206382C900E80D7A /* LaunchScreen.storyboard */,
@@ -130,6 +139,15 @@
 				EC22407D206382C900E80D7A /* Info.plist */,
 			);
 			path = PDDrawerViewControllerUITests;
+			sourceTree = "<group>";
+		};
+		EC224089206382CF00E80D7A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EC22408B206382EA00E80D7A /* PDDrawerViewController.h */,
+				EC22408A206382EA00E80D7A /* PDDrawerViewController.m */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +286,8 @@
 				EC22405C206382C900E80D7A /* ViewController.m in Sources */,
 				EC224067206382C900E80D7A /* main.m in Sources */,
 				EC224059206382C900E80D7A /* AppDelegate.m in Sources */,
+				EC22408C206382EA00E80D7A /* PDDrawerViewController.m in Sources */,
+				EC22409220638DFC00E80D7A /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

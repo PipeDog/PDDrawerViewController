@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "PDDrawerViewController.h"
+#import "MenuViewController.h"
+#import "ViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <PDDrawerViewControllerDelegate>
 
 @end
 
@@ -17,7 +20,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    ViewController *mainPage = [[ViewController alloc] init];
+    MenuViewController *menuPage = [[MenuViewController alloc] init];
+
+    mainPage.view.backgroundColor = [UIColor blueColor];
+    menuPage.view.backgroundColor = [UIColor orangeColor];
+
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainPage];
+    
+    _drawerVC = [[PDDrawerViewController alloc] initWithMainViewController:navigationController menuViewController:menuPage];
+    self.window.rootViewController = self.drawerVC;
+
+    [self.drawerVC bind:self];
+    [self.drawerVC bind:mainPage];
     return YES;
+}
+
+#pragma mark - PDDrawerViewControllerDelegate
+- (void)menuDidAppear {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+- (void)menuDidDisappear {
+    NSLog(@"%s", __FUNCTION__);
 }
 
 
