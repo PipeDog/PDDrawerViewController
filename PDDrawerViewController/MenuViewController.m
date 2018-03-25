@@ -47,13 +47,6 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reUse];
         cell.backgroundColor = [UIColor clearColor];
         cell.textLabel.textColor = [UIColor whiteColor];
-        
-        UIView *selectedBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(0,
-                                                                                  0,
-                                                                                  CGRectGetWidth(tableView.frame),
-                                                                                  44.f)];
-        selectedBackgroundView.backgroundColor = [UIColor whiteColor];
-        cell.selectedBackgroundView = selectedBackgroundView;
     }
     cell.imageView.image = self.dataArray[indexPath.row][0];
     cell.textLabel.text = self.dataArray[indexPath.row][1];
@@ -71,11 +64,11 @@
 - (NSArray<NSArray *> *)dataArray {
     if (!_dataArray) {
         _dataArray = @[@[[UIImage imageNamed:@"sidebar_business"], @"我的商城"],
-                           @[[UIImage imageNamed:@"sidebar_purse"], @"QQ钱包"],
-                           @[[UIImage imageNamed:@"sidebar_decoration"], @"个性装扮"],
-                           @[[UIImage imageNamed:@"sidebar_favorit"], @"我的收藏"],
-                           @[[UIImage imageNamed:@"sidebar_album"], @"我的相册"],
-                           @[[UIImage imageNamed:@"sidebar_file"], @"我的文件"]];
+                       @[[UIImage imageNamed:@"sidebar_purse"], @"QQ钱包"],
+                       @[[UIImage imageNamed:@"sidebar_decoration"], @"个性装扮"],
+                       @[[UIImage imageNamed:@"sidebar_favorit"], @"我的收藏"],
+                       @[[UIImage imageNamed:@"sidebar_album"], @"我的相册"],
+                       @[[UIImage imageNamed:@"sidebar_file"], @"我的文件"]];
     }
     return _dataArray;
 }
