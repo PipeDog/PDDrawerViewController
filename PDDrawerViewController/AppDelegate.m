@@ -28,7 +28,6 @@
     MenuViewController *menuPage = [[MenuViewController alloc] init];
 
     mainPage.view.backgroundColor = [UIColor blueColor];
-    menuPage.view.backgroundColor = [UIColor orangeColor];
 
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainPage];
     

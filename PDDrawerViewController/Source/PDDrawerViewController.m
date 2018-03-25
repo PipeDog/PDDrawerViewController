@@ -162,13 +162,6 @@ static CGFloat const kDefaultVisibleMenuWidth = 300.f;
 - (void)_panGestureRecognizerBegan:(UIPanGestureRecognizer *)sender {
     self.moving = YES;
     self.startTouchPointInMainVC = [sender locationInView:self.mainViewController.view];
-    
-    CGRect rect = CGRectMake(kScreenshotImageOriginalLeft,
-                             0,
-                             CGRectGetWidth(self.view.bounds),
-                             CGRectGetHeight(self.view.bounds));
-
-    self.menuViewController.view.frame = rect;
 }
 
 - (void)_panGestureRecognizerChanged:(UIPanGestureRecognizer *)sender {
