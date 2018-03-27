@@ -197,6 +197,7 @@ static CGFloat const kDefaultVisibleMenuWidth = 300.f;
         [self moveViewWithX:0];
     } completion:^(BOOL finished) {
         self.moving = NO;
+        [self sendMenuDidDisappearNotification];
     }];
 }
 
